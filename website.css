@@ -1,4 +1,3 @@
-
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -145,17 +144,16 @@ button {
     font-style: oblique;
 }
 .box {
-    height: 2000px;
+    min-height: 50vh; /* Set a minimum height as a percentage of the viewport height */
     background-color: #ACD7EC;
     border-radius: 15px;
     margin-bottom: 10px;
     margin-top: 10px;
+    margin-bottom: 20px; /* Add margin to create space with the footer */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-
-   
 }
 /* card */
 .card {
@@ -164,7 +162,11 @@ button {
     width: 40%;
     font-size: large;
     text-align: center;
+    margin: 30px 0
   }
+  .card:last-child {
+    margin-bottom: 30px;
+}
   
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -173,3 +175,24 @@ button {
   .container {
     padding: 2px 16px;
   }
+
+  @media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: 0; /* Adjust margin for smaller screens */
+  }
+
+  .card {
+    width: 80%; /* Adjust card width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%; /* Adjust card width for even smaller screens */
+  }
+}
