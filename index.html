@@ -1,136 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="website.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="TechDeck — curated picks of the best phones to buy in 2023 with prices, quick specs and buying links." />
 
+  <title>TechDeck — Best phones to buy in 2023</title>
+
+  <!-- Favicon (optional - add your own) -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="website.css" />
+
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#0b1b2b" />
 </head>
 <body>
-  <div class="loader"></div>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li class="logo"></li>
-                <li class="item"><a href="#"> home </a></li>
-                <li class="item"><a href="#"> about </a></li>
-                <li class="item"><a href="#"> service </a></li>
-                <li class="item"><a href="#"> contact us </a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Simple loader (keep controlled by your script) -->
+  <div class="loader" aria-hidden="true"></div>
 
-    <div class="topp">
-        <h1>Best phones to buy in 2023</h1>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="TechDeck home">
+        <!-- Replace with logo image if you have one: <img src="logo.png" alt="TechDeck"> -->
+        <span class="logo-text">TechDeck</span>
+      </a>
+
+      <nav class="navbar" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Dark mode toggle (darkmode-js will initialize this if present) -->
+      <button id="dm-toggle" class="btn btn-ghost" aria-pressed="false" title="Toggle dark mode">Toggle theme</button>
+    </div>
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Best phones to buy in 2023</h1>
+        <p class="hero-sub">Carefully selected flagship and value phones with current pricing and quick details.</p>
+      </div>
+    </section>
+
+    <section class="products container" aria-labelledby="product-heading">
+      <h2 id="product-heading" class="section-title">Featured phones</h2>
+
+      <div class="cards-grid" role="list">
+        <!-- Card: iPhone 15 -->
+        <article class="card" role="listitem" aria-labelledby="iphone15-title">
+          <figure>
+            <img src="iphone.png" alt="iPhone 15 front view" class="card-image" loading="lazy" />
+            <figcaption class="sr-only">Apple iPhone 15</figcaption>
+          </figure>
+          <div class="card-body">
+            <h3 id="iphone15-title" class="card-title">Apple iPhone 15</h3>
+            <p class="card-price">₹79,900</p>
+            <p class="card-desc">Modern design, great camera performance and iOS ecosystem.</p>
+            <div class="card-actions">
+              <a class="btn" href="#" role="button">View details</a>
+              <a class="btn btn-primary" href="#" role="button">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Samsung S23 Ultra -->
+        <article class="card" role="listitem" aria-labelledby="s23-title">
+          <figure>
+            <img src="s23.png" alt="Samsung Galaxy S23 Ultra" class="card-image" loading="lazy" />
+          </figure>
+          <div class="card-body">
+            <h3 id="s23-title" class="card-title">Samsung Galaxy S23 Ultra</h3>
+            <p class="card-price">₹74,999</p>
+            <p class="card-desc">Top-tier display, S Pen support and powerful performance.</p>
+            <div class="card-actions">
+              <a class="btn" href="#">View details</a>
+              <a class="btn btn-primary" href="#">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Google Pixel 7 -->
+        <article class="card" role="listitem" aria-labelledby="pixel7-title">
+          <figure>
+            <img src="pixel%207.png" alt="Google Pixel 7" class="card-image" loading="lazy" />
+          </figure>
+          <div class="card-body">
+            <h3 id="pixel7-title" class="card-title">Google Pixel 7</h3>
+            <p class="card-price">₹40,999</p>
+            <p class="card-desc">Clean Android experience, excellent camera software.</p>
+            <div class="card-actions">
+              <a class="btn" href="#">View details</a>
+              <a class="btn btn-primary" href="#">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Vivo X90 Pro -->
+        <article class="card" role="listitem" aria-labelledby="vivo-title">
+          <figure>
+            <img src="vivo-x90-pro.png" alt="Vivo X90 Pro" class="card-image" loading="lazy" />
+          </figure>
+          <div class="card-body">
+            <h3 id="vivo-title" class="card-title">Vivo X90 Pro</h3>
+            <p class="card-price">₹79,633</p>
+            <p class="card-desc">Excellent imaging hardware and premium build quality.</p>
+            <div class="card-actions">
+              <a class="btn" href="#">View details</a>
+              <a class="btn btn-primary" href="#">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Samsung Galaxy Z Flip 5 -->
+        <article class="card" role="listitem" aria-labelledby="zflip-title">
+          <figure>
+            <img src="zflip.png" alt="Samsung Galaxy Z Flip 5" class="card-image" loading="lazy" />
+          </figure>
+          <div class="card-body">
+            <h3 id="zflip-title" class="card-title">Samsung Galaxy Z Flip 5</h3>
+            <p class="card-price">₹99,999</p>
+            <p class="card-desc">Compact foldable, pocket-friendly flagship experience.</p>
+            <div class="card-actions">
+              <a class="btn" href="#">View details</a>
+              <a class="btn btn-primary" href="#">Buy</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Samsung Galaxy Z Fold 5 -->
+        <article class="card" role="listitem" aria-labelledby="zfold-title">
+          <figure>
+            <img src="zfold.png" alt="Samsung Galaxy Z Fold 5" class="card-image" loading="lazy" />
+          </figure>
+          <div class="card-body">
+            <h3 id="zfold-title" class="card-title">Samsung Galaxy Z Fold 5</h3>
+            <p class="card-price">₹164,999</p>
+            <p class="card-desc">Large foldable display for productivity and multitasking.</p>
+            <div class="card-actions">
+              <a class="btn" href="#">View details</a>
+              <a class="btn btn-primary" href="#">Buy</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about container" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">About TechDeck</h2>
+      <p>We review and recommend devices to help you make informed buying decisions. Prices are indicative — always check official retailers for the latest offers.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-top">
+      <div class="stats">
+        <div class="stat">
+          <strong class="stat-number">400,000+</strong>
+          <span class="stat-label">monthly views</span>
+        </div>
+        <div class="stat">
+          <strong class="stat-number">1,000,000+</strong>
+          <span class="stat-label">total viewers</span>
+        </div>
+        <div class="stat">
+          <strong class="stat-number">100,000+</strong>
+          <span class="stat-label">new visitors</span>
+        </div>
+      </div>
+
+      <div class="back-to-top">
+        <a class="btn btn-ghost" href="#top" aria-label="Back to top">Back to top</a>
+      </div>
     </div>
 
-        <div class="box">
+    <div class="container footer-links">
+      <div class="footer-column">
+        <h3>Get to know us</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
 
-            <div class="card">
-                <img src="iphone.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                  <h4><b>Iphone 15</b></h4> 
-                  <p>Price :- ₹79.900 </p> 
-                </div>
-              </div>
+      <div class="footer-column">
+        <h3>Connect with us</h3>
+        <ul>
+          <li><a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></li>
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
 
+      <div class="footer-column">
+        <h3>Feedback</h3>
+        <ul>
+          <li><a href="#">Need help?</a></li>
+          <li><a href="#">Report a bug</a></li>
+        </ul>
+      </div>
+    </div>
 
-              <div class="card">
-                <img src="s23.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                  <h4><b>S23 Ultra</b></h4> 
-                  <p>Price :- ₹74,999</p> 
-                </div>
-              </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> TechDeck — All rights reserved.</p>
+    </div>
+  </footer>
 
-              <div class="card">
-                <img src="pixel 7.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                  <h4><b>Google Pixel 7</b></h4> 
-                  <p>Price :- ₹40,999 </p> 
-                </div>
-              </div>
+  <noscript>
+    <div class="noscript-warning">
+      JavaScript is disabled in your browser. Some features of this site may not work correctly.
+    </div>
+  </noscript>
 
-              <div class="card">
-                <img src="vivo-x90-pro.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                  <h4><b>Vivo X90 Pro</b></h4> 
-                  <p>Price :- ₹79,633</p> 
-                </div>
-              </div>
+  <!-- Dark mode library (kept) -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
-              <div class="card">
-                <img src="zflip.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                  <h4><b>Samsung Galaxy Z-Flip 5</b></h4> 
-                  <p>Price :- ₹99,999</p> 
-                </div>
-              </div>
+  <!-- Your custom script -->
+  <script src="script.js"></script>
 
-              <div class="card">
-                <img src="zfold.png" alt="Avatar" style="width:100%">
-                <div class="container">
-                  <h4><b>Samsung Galaxy <Z-Fold></Z-Fold> 5</b></h4> 
-                  <p>Price :- ₹1,64,999</p> 
-                </div>
-              </div>
+  <script>
+    // Small enhancements: update year, hook up dark mode toggle, and accessible toggle state
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-              
+    // Initialize darkmode-js if available
+    if (window.Darkmode) {
+      const options = { time: '0.3s' };
+      const darkmode = new window.Darkmode(options);
+      const btn = document.getElementById('dm-toggle');
 
+      btn.addEventListener('click', function () {
+        darkmode.toggle();
+        const pressed = this.getAttribute('aria-pressed') === 'true';
+        this.setAttribute('aria-pressed', String(!pressed));
+      });
+    }
 
-              </div>
-
-
-    <footer>
-        <div class="audience">
-            <div class="aone">
-                <h2 class="count"> 400,000 + </h2>
-                <p> monthy views </p>
-            </div>
-            
-            <div class="atwo">
-                <h2 class="count" > 10,00,000 + </h2>
-                <p> total viewers </p>
-            </div>
-            <div class="athree">
-                <h2 class="count"> 100,000 + </h2>
-                <p> new visitors </p>
-            </div>
-
-        </div>
-        
-        <div class="footer">
-            <button onclick="window.location.href='https://yuvraj-777.github.io/TechDeck/';">Back To Top</button>
-        </div>
-        <div class="lastfooter">
-            <div class="lone">
-                <h2> get to know us</h2>
-                <p> about us </p>
-                <p> service </p>
-                <p> contact us </p>
-
-            </div>
-            <div class="ltwo">
-                <h2> connect with us</h2>
-                <p> facebook </p>
-                <p> twitter </p>
-                <p> instagram </p>
-
-            </div>
-            <div class="lthree">
-                <h2> share your feeback
-                </h2>
-                    <p> Need Help </p>
-                    <p> bug report </p>
-            </div>
-           
-            
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script src="script.js"></script>
-
+    // Improve "Back to top" focus target
+    document.querySelectorAll('a[href="#top"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
